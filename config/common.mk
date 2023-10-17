@@ -14,6 +14,7 @@ endif
 # Define some properties for GMS
 ifneq ($(TARGET_DOES_NOT_USE_GAPPS), true)
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+$(call inherit-product, vendor/SystemUIClocks/product.mk)
 # Anything including updatable_apex.mk should have done so by now.
 ifeq ($(TARGET_FLATTEN_APEX), false)
 $(call inherit-product-if-exists, vendor/partner_modules/build/mainline_modules.mk)
